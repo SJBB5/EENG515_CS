@@ -8,3 +8,13 @@ FFT
 Wavelets
 
 How to Run
+
+## Data
+
+Download the fastMRI single-coil knee dataset from https://fastmri.med.nyu.edu/ and place the `.tar` file in `data/raw/` (gitignored). The function will extract it automatically on first use.
+
+```matlab
+addpath('src')
+kspace = load_mri_data();           % single-coil, file 1, middle slice
+kspace = load_mri_data(2, 10, true) % multi-coil, file 2, slice 10
+```
